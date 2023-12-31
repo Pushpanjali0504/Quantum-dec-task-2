@@ -1,0 +1,75 @@
+/* Reset some default styles */
+body, h1, h2, p, button {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f16565;
+}
+
+header {
+  background-color: #3c3131;
+  color: #d89696;
+  padding: 10px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 19px;
+}
+
+.book {
+  width: 300px;
+  background-color: #fff;
+  margin: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(36, 36, 36, 0.1);
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book h2 {
+  font-size: 1.2em;
+  margin-bottom: 9px;
+}
+
+.book p {
+  color: #bab4b4;
+  margin-bottom: 6px;
+}
+
+.book button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.book button:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

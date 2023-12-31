@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Bookstore</title>
+  <style>
+    /* Include your CSS styles here */
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Online Bookstore</h1>
+  </header>
+
+  <section id="bookstore">
+    <!-- Your book listings go here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Online Bookstore</p>
+  </footer>
+
+  <script>
+    // Example JavaScript for adding books to a shopping cart
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sample book data (replace with your actual data)
+      const books = [
+        { id: 1, title: "Book Title 1", author: "Author Name 1", price: 19.99 },
+        { id: 2, title: "Book Title 2", author: "Author Name 2", price: 24.99 },
+        // Add more books as needed
+      ];
+
+      const bookstoreSection = document.getElementById("bookstore");
+
+      // Render books in the bookstore
+      function renderBooks() {
+        books.forEach(book => {
+          const bookElement = document.createElement("div");
+          bookElement.classList.add("book");
+          bookElement.innerHTML = `
+            <img src="book${book.id}.jpg" alt="${book.title}">
+            <h2>${book.title}</h2>
+            <p>Author: ${book.author}</p>
+            <p>Price: $${book.price.toFixed(2)}</p>
+            <button onclick="addToCart(${book.id})">Add to Cart</button>
+          `;
+          bookstoreSection.appendChild(bookElement);
+        });
+      }
+
+      // Example shopping cart (replace with your actual implementation)
+      const shoppingCart = [];
+
+      // Function to add a book to the shopping cart
+      window.addToCart = function(bookId) {
+        const selectedBook = books.find(book => book.id === bookId);
+        if (selectedBook) {
+          shoppingCart.push(selectedBook);
+          alert(`"${selectedBook.title}" added to the cart.`);
+        }
+      };
+
+      // Call the function to render books
+      renderBooks();
+    });
+  </script>
+
+</body>
+</html>
